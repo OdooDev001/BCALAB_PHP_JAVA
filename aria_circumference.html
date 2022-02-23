@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="textbox" type="text">
+    <button onclick="circle()">Check area & cirumference</button>
+    <br>
+    <p>aria of circle : <i id="aria"></i> </p>
+    <p>circumference of circle : <i id="cer"></i> </p>
+    <script>
+        function circle(){
+            const pi = 3.141;
+            var aria = 0;
+            var cer = 0 ;
+            var r = document.getElementById("textbox").value
+            aria = pi*r*r
+            cer = 2*pi*r
+            document.getElementById("aria").innerHTML=aria
+            document.getElementById("cer").innerHTML=cer
+        }
+    </script>
+</body>
+</html>

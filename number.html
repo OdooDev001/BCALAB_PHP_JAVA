@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="textbox" type="text">
+    <button onclick="circle()">Check number</button>
+    <script>
+        function circle(){
+            var r = document.getElementById("textbox").value
+            var n = r;
+            let sum = 0;
+            for (let i =1;i<=Math.sqrt(r);i++){
+                if (r%i == 0){
+                    if(r/i == i)
+                        sum = sm +i ;
+                    else{
+                        sum = sum+i;
+                        sum = sum+(n/i);
+                    }
+                }
+            }
+            sum = sum-n;
+            if (sum > n){
+                alert("this in an abundant number")
+            }
+            else if(sum < n){
+                alert("this is a deficien number")
+            }
+            else{
+                alert("this is a perfect number")
+            }
+        }
+        
+        
+    </script>
+</body>
+
+</html>

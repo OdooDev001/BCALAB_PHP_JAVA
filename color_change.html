@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="color_change()">chage color</button>
+    <div id="div" style="height: 100vh; width: 100%;"></div>
+    <script>
+        function color_change() {
+            const colors = ["#ff00ee","#ee00ff","#fe1234","#65ef23","#564ff84","Ff3232","#ef1265"]
+                let i =Math.floor((Math.random() * colors.length) + 1);
+                document.getElementById("div").style.backgroundColor=colors[i]
+                
+        }
+        window.onload = color_change;
+    </script>
+</body>
+</html>

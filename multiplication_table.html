@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="number" id="number"/><br>
+    <input type="text" placeholder="limit" id="limit" />
+    <br>
+    <button onclick="table()"> view table </button>
+    <h1>multiplication table</h1><br>
+    <h3 id="table"></h3>
+
+    <script>
+        function table() {
+            var n = document.getElementById("number").value
+            var l = document.getElementById("limit").value
+            let table = document.getElementById('table');
+            for (let i = 1; i <=l; i++) {
+                let sum = i*n
+                let line = i + " * " + n +" = " + sum;
+                table.innerHTML = table.innerHTML+"<div><br>"+line+"</div>"
+            }
+        }
+    </script>
+</body>
+</html>

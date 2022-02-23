@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center> 
+        <input type="number" name="" id="n1">
+        <input type="number" name="" id="n2"><br><br>
+        <button onclick="calc(1)"> Add </button>
+        <button onclick="calc(2)"> Subtract </button><br><br>
+        <button onclick="calc(3)"> Multiply </button>
+        <button onclick="calc(4)"> Divide </button><br>
+        <h3>Result = <h3 id="result"></h3></h3>
+    </center>
+    <script>
+        function calc(n) {
+            var r =n;
+            var sum = 0;
+            var n1 = parseInt(document.getElementById('n1').value);
+            var n2 = parseInt(document.getElementById('n2').value);
+            
+            if (r == 1){
+                sum = n1+n2;
+            }else if (r == 2){
+                sum = n1-n2;
+            }else if(r == 3){
+                sum = n1*n2; 
+            }else{
+                sum = n1/n2;
+            }
+           document.getElementById("result").innerText=sum
+        }
+    </script>
+</body>
+</html>

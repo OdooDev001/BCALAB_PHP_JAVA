@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select" onchange="capital()">
+        <input type="text" id="capital" />
+
+    </select>
+    <script>
+        function capital() {
+            let va = document.getElementById("select").value
+            contry = data[va]
+            capita=contry["capital"]
+            document.getElementById("capital").value=capita
+        }
+
+        function loadcontries() {
+            var xmlHttp = new XMLHttpRequest();
+            url ="https://restcountries.eu/rest/v2/all"
+            xmlHttp.open( "GET", url, false );
+            xmlHttp.send( null );
+            window.data = JSON.parse(xmlHttp.responseText)
+            for(let i=0;i<200;++i){
+                s=data[i];
+                m=s["name"];
+                let newOption = new Option(m,i);
+                document.getElementById("select").add(newOption,undefined);
+            }
+        
+
+        }
+        window.onload=loadcontries()
+    </script>
+</body>
+</html>

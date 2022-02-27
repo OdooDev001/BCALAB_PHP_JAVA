@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>User Login</h3>
+    <h4 id="success" style="color:Green;"></h4>
+    <h4 id="error" style="color:red;"></h4>
+    <input type="text" id="name" placeholder="Enter user name"><br><br>
+    <input type="password" id="pass" placeholder="password"><br><br>
+    <input type="password" id="cpass" placeholder="confirm password"><br><br>   
+    <button onclick="login()">Submit</button>
+
+
+    <script>
+        function login() {
+            
+            var user = document.getElementById("name").value;
+            var password = document.getElementById("pass").value;
+            var conf = document.getElementById("cpass").value;
+            console.log(user)
+            if (password == conf){
+                if (password.length >= 8){
+                    document.getElementById("success").innerText="success"
+                }
+                else{
+                    document.getElementById("error").innerText="password must be minimam 8 charecter"
+                }
+            }else{
+                document.getElementById("error").innerText="password and confirm password not same"
+            }
+        }
+    </script>
+</body>
+</html>

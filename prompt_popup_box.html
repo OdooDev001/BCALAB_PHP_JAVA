@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function popup() {
+            let sum =0
+            var a =new Array()
+            let len =prompt("hallo","enter length");
+            for(let i=0;i<len;++i){
+                console.log(i)
+                a[i]= prompt(i+1,"enter an element");
+            }
+        a.forEach(element => {
+            sum = sum+parseInt(element)
+        });
+        alert("the sum is : "+sum)
+        }
+    
+        window.onload=popup()
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter something" id="something" onblur="cool()" /><br><br>
+    <input type="text" placeholder="enter something" id="" onblur="cool()" />
+
+    <script>
+        function cool() {
+            document.getElementById("something").style.borderColor="red";
+            document.getElementById("something").style.color="red";
+    
+        }
+    </script>
+</body>
+</html>

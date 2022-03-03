@@ -8,32 +8,33 @@
 </head>
 <body>
     <select id="select" onchange="capital()">
-        <input type="text" id="capital" />
-
+        <option value="Afghanistan">Afghanistan</option>
+        <option value="Algeria">Algeria</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Armenia">Armenia</option>
+        <option value="Australia">Australia</option>
+        <option value="Austria">Austria</option>
+        <option value="Bahrain">Bahrain</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="India">India</option>
     </select>
+    <input type="text" id="capital" name="">
     <script>
         function capital() {
+            var data={"Afghanistan":"Kabul",
+                    "Algeria":"Algiers",
+                    "Argentina":"Buenos Aires",
+                    "Armenia":"Yerevan",
+                    "Australia":"Canberra",
+                    "Austria":"Vienna",
+                    "Bahrain":"Manama",
+                    "Bangladesh":"Dhaka",
+                    "India":"New Delhi"
+                }
             let va = document.getElementById("select").value
             contry = data[va]
-            capita=contry["capital"]
-            document.getElementById("capital").value=capita
-        }
-
-        function loadcontries() {
-            var xmlHttp = new XMLHttpRequest();
-            url ="https://restcountries.eu/rest/v2/all"
-            xmlHttp.open( "GET", url, false );
-            xmlHttp.send( null );
-            window.data = JSON.parse(xmlHttp.responseText)
-            for(let i=0;i<200;++i){
-                s=data[i];
-                m=s["name"];
-                let newOption = new Option(m,i);
-                document.getElementById("select").add(newOption,undefined);
+            document.getElementById("capital").value=contry
             }
-        
-
-        }
         window.onload=loadcontries()
     </script>
 </body>

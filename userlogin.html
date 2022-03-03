@@ -22,9 +22,9 @@
             var user = document.getElementById("name").value;
             var password = document.getElementById("pass").value;
             var conf = document.getElementById("cpass").value;
-            console.log(user)
             if (password == conf){
                 if (password.length >= 8){
+                    document.getElementById("error").innerText=""
                     document.getElementById("success").innerText="success"
                 }
                 else{

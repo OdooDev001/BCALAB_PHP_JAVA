@@ -7,13 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" placeholder="enter something" id="something" onblur="cool()" /><br><br>
-    <input type="text" placeholder="enter something" id="" onblur="cool()" />
+    <input type="text" placeholder="enter something" id="something" onblur="cool(1)" /><br><br>
+    <input type="text" placeholder="enter something" id="second" onfocus="cool(2)" />
 
     <script>
-        function cool() {
-            document.getElementById("something").style.borderColor="red";
-            document.getElementById("something").style.color="red";
+        function cool(id) {
+            if (id==1){
+                document.getElementById("something").style.borderColor="red";
+                document.getElementById("something").style.color="red";
+            }else{
+                document.getElementById("second").style.borderColor="green";
+                document.getElementById("second").style.color="green";
+            }
     
         }
     </script>

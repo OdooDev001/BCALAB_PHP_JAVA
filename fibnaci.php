@@ -11,15 +11,15 @@
                     if ($limit!=""){
                               
                               $count=0;
-                              $n=0;
-                              $n1=1;
-                              $next=0;
+                              $a=0;
+                              $b=1;
+                              $s=0;
                               echo "the fibonacci sequnce..\n";
                               while ($count <=(int)$limit){
                                         echo $n," ";
-                                        $next=$n+$n1;
-                                        $n=$n1;
-                                        $n1=$next;
+                                        $s=$a+$b;
+                                        $a=$b;
+                                        $b=$s;
                                         $count=$count+1;
                               }
                     }

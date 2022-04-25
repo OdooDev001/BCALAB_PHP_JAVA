@@ -7,16 +7,16 @@
 </form>
 <?php
           if($_GET){
-                    $limit=$_GET["input"];
-                    if ($limit!=""){
+                    $l=$_GET["input"];
+                    if ($l!=""){
                               
-                              $count=0;
+                              $c=0;
                               $a=0;
                               $b=1;
                               $s=0;
                               echo "the fibonacci sequnce..\n";
-                              while ($count <=(int)$limit){
-                                        echo $n," ";
+                              while ($c <=(int)$l){
+                                        echo $a," ";
                                         $s=$a+$b;
                                         $a=$b;
                                         $b=$s;
